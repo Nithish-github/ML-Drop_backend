@@ -8,7 +8,7 @@ VENV_DIR = "venv"
 def create_venv():
     """Creates a virtual environment and installs dependencies."""
     print("Creating virtual environment...")
-    # subprocess.check_call([sys.executable, "-m", "venv", VENV_DIR])
+    subprocess.check_call([sys.executable, "-m", "venv", VENV_DIR])
 
     # Activate the virtual environment and install requirements
     activate_venv()
