@@ -52,11 +52,24 @@ class ExampleView(APIView):
         if not base64_image or not filter_type:
             return Response({"error": "Image and filter type are required."}, status=status.HTTP_400_BAD_REQUEST)
 
+
+
+
         try:
             # Use the external module to apply the filter
             processed_image_base64 = apply_filter(base64_image, filter_type)
         except ValueError as e:
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+        '''
+        if the filter is for code generation 
+        '''
+        
+
+
+        
 
         # Response data
         response_data = {
