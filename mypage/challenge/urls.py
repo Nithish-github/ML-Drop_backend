@@ -3,8 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("janauary",views.index),
-    path("feb",views.index_2),
-    path('api/example/', views.ExampleView.as_view(), name='example-api'),
-
+    path('api/opencv_ops/', views.OpencvView.as_view(), name='opencv-api'),
+    path('api/code_generation/', views.CodeGenerationView.as_view(), name='code_generation-api'),
 ]
