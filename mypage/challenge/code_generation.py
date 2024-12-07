@@ -12,6 +12,10 @@ def generate_code(tasks):
         code += "# Convert the image to grayscale and apply thresholding\n"
         code += "gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n"
         code += "_, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)\n\n"
+
+    if 'blur' in tasks:
+        code += "# Apply Gaussian Blur to the image\n"
+        code += "blurred = cv2.GaussianBlur(image, (5, 5), 0)\n\n"
     
     if 'findcontours' in tasks:
         code += "# Find contours in the thresholded image\n"
