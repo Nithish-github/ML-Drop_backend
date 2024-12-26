@@ -59,6 +59,7 @@ ROOT_URLCONF = "mypage.urls"
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',
+    'https://ml-drop.vercel.app/',
 ]
 
 TEMPLATES = [
